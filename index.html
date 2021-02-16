@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>password generator</title>
+    <link rel="stylesheet" href="./bulma.min.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns py-5 is-vcentered">
+        <div class="column grey">password-generator</div>
+        <div class="column grey has-text-right">menu</div>
+      </div>
+      <!--  -->
+      <div class="column is-half is-offset-one-quarter">
+        <div class="field has-addons">
+          <div class="control is-flex-grow-1">
+            <input
+              class="input monospace"
+              type="text"
+              id="result"
+              onClick="this.select();"
+            />
+          </div>
+          <div class="control">
+            <a class="button is-info" id="generate"> Generate </a>
+          </div>
+        </div>
+        <!--  -->
+        <div class="field is-centered">
+          <input
+            class="slider is-fullwidth is-info"
+            step="1"
+            min="0"
+            max="64"
+            value="16"
+            type="range"
+            id="length_input"
+          />
+          <span id="length_value" class="is-size-6 m-4 tag is-link"></span>
+        </div>
+        <!--  -->
+        <div class="field" onchange="update_options()">
+          <label class="checkbox px-3 py-1">
+            <input type="checkbox" id="upper" checked />
+            Uppercase
+          </label>
+
+          <label class="checkbox px-3 py-1">
+            <input type="checkbox" id="lower" checked />
+            Lowercase
+          </label>
+
+          <label class="checkbox px-3 py-1">
+            <input type="checkbox" id="number" checked />
+            Numbers
+          </label>
+
+          <label class="checkbox px-3 py-1">
+            <input type="checkbox" id="punctuation" />
+            Punctuation
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
