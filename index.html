@@ -18,9 +18,13 @@
       <!--  -->
       <div class="column is-half is-offset-one-quarter">
         <section
-          class="hero is-large is-dark has-text-centered is-half is-offset-one-quarter"
+          class="hero is-dark has-text-centered is-half is-offset-one-quarter"
         >
           <div class="hero-body">
+            <!--  -->
+            <div class="field py-5">
+              <h4 class="is-size-3">Create strong passwords</h4>
+            </div>
             <!--  -->
             <div class="field has-addons">
               <div class="control is-flex-grow-1">
@@ -33,6 +37,9 @@
               </div>
               <div class="control">
                 <a class="button is-info" id="generate"> Generate </a>
+              </div>
+              <div class="control">
+                <a class="button is-primary" id="copy"> Copy </a>
               </div>
             </div>
             <!--  -->
@@ -47,7 +54,21 @@
                 type="range"
                 id="length_input"
               />
-              <span id="length_value" class="is-size-6 m-4 tag is-link"></span>
+              <p>
+                <span>Password Length (4-64)</span>
+                <span
+                  id="length_value"
+                  class="is-size-6 m-4 tag is-link"
+                ></span>
+              </p>
+            </div>
+
+            <div
+              class="notification is-link is-light is-hidden pg-message-alert"
+              id="pg-message-alert"
+            >
+              <!-- <button class="delete"></button> -->
+              Copied!.
             </div>
             <!--  -->
             <div class="field" onchange="update_options()">
@@ -79,5 +100,6 @@
     </div>
 
     <script src="./index.js"></script>
+    <script src="./copy.js"></script>
   </body>
 </html>
