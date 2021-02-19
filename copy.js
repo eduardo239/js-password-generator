@@ -15,7 +15,7 @@ const copyToClipboard = () => {
   pgMessageAlert.classList.remove('is-hidden');
   setTimeout((i) => {
     pgMessageAlert.classList.add('is-hidden');
-  }, 2500);
+  }, 2000);
 };
 
 btnCopy.addEventListener('click', copyToClipboard);
